@@ -1,0 +1,9 @@
+JS refresher before react:
+
+https://www.freecodecamp.org/news/javascript-concepts-you-should-know-before-learning-react/
+
+
+
+Ternary Operator 
+Destructuring
+Spread Operator

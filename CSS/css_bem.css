@@ -1,0 +1,119 @@
+/* Introduction to BEM */
+
+/* BEM stands for Block, Element, Modifier. It is a methodology that provides a structured way to 
+name your CSS classes, making your code more readable and maintainable. The main idea is to divide
+the user interface into independent blocks. */
+
+/* 
+Block
+
+A block is a standalone entity that is meaningful on its own. It represents a high-level 
+component of the UI.
+
+Example: */
+
+
+<div class="button">...</div>
+
+.button {
+    /* Block styles */
+  }
+  
+
+}
+
+/* 
+Element
+
+An element is a part of a block that has no standalone meaning and is semantically tied to its 
+block. Elements are denoted by a double underscore (__). */
+
+<div class="button">
+  <span class="button__icon">...</span>
+  <span class="button__text">Click me</span>
+</div>
+
+.button__icon {
+    /* Element styles */
+  }
+  
+  .button__text {
+    /* Element styles */
+  }
+
+  
+/* Modifier
+
+A modifier is a flag on a block or element that changes its appearance or behavior. Modifiers are 
+denoted by a double hyphen (--). */
+
+<div class="button button--primary">
+  <span class="button__icon">...</span>
+  <span class="button__text">Click me</span>
+</div>
+
+.button--primary {
+    /* Modifier styles */
+  }
+
+  
+/* BEM Naming Conventions
+
+
+Block: The name of the block is the root of the naming convention.
+
+Example: menu, button, header
+
+Element: The name of the element is formed by adding two underscores (__) followed by the element name.
+
+Example: menu__item, button__icon, header__title
+
+Modifier: The name of the modifier is formed by adding two hyphens (--) followed by the modifier name.
+
+Example: menu__item--active, button--primary, header__title--large */
+
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item menu__item--active">
+      <a href="#" class="menu__link">Home</a>
+    </li>
+    <li class="menu__item">
+      <a href="#" class="menu__link">About</a>
+    </li>
+    <li class="menu__item">
+      <a href="#" class="menu__link">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+/* Block */
+.menu {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Element */
+  .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu__item {
+    margin-right: 20px;
+  }
+  
+  .menu__link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Modifier */
+  .menu__item--active .menu__link {
+    font-weight: bold;
+  }
+
+  
+Benefits of BEM

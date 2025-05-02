@@ -1,0 +1,94 @@
+/* Articles
+
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+
+/* Media queries in CSS are used to apply different styles to different devices or screen sizes. 
+They are a key component of responsive web design, allowing you to create flexible layouts that 
+adapt to various screen resolutions and device capabilities. */
+
+
+/* Basic Syntax */
+
+@media [media-type] and (media-feature) {
+    /* CSS rules */
+  }
+
+  
+/* 
+Common Media Types
+
+all: Suitable for all devices.
+print: Intended for printed material and documents viewed on a screen in print preview mode.
+screen: Intended primarily for screens. */
+
+
+/* Common Media Features
+
+width / min-width / max-width: The width of the viewport.
+height / min-height / max-height: The height of the viewport.
+orientation: The orientation of the device (landscape or portrait).
+resolution: The resolution of the device, typically in dots per inch (DPI). */
+
+/* 
+Example 1: Basic Media Query
+
+This example changes the background color of the body element when the viewport width is 600px or 
+less. */
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+
+/* 
+Example 2: Multiple Conditions
+This example applies styles when the viewport width is between 600px and 1200px. */
+
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+
+/*   
+Example 3: Orientation
+This example changes the layout based on the device orientation. */
+
+@media screen and (orientation: landscape) {
+    body {
+      background-color: lightcoral;
+    }
+  }
+
+/* 
+Example 4: High Resolution Displays
+This example targets devices with a minimum resolution of 2dppx (dots per pixel). 
+*/
+
+@media screen and (min-resolution: 2dppx) {
+    body {
+      background-color: lightgoldenrodyellow;
+    }
+  }
+  
+/* Combining Media Queries
+You can combine multiple media queries using commas. This example applies styles if the viewport 
+width is less than 600px or the device is in portrait orientation. */
+  
+@media screen and (max-width: 600px), screen and (orientation: portrait) {
+    body {
+      background-color: lightpink;
+    }
+  }
+
+
+/* Best Practices
+
+Use min-width for mobile-first design: Start with styles for the smallest screens and add media 
+queries for larger screens.
+Group related styles within the same media query to keep your CSS organized.
+Test your media queries on multiple devices to ensure they work as expected. */

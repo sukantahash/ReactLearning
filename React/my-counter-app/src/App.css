@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0; /* removes any default space around the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* sets the body 100% of the viewport height, the entire screen */
+}
+
+.counter-container {
+  background-color: white;
+  padding: 5rem;             /*adds padding inside the box*/
+  border-radius: 10px;        /* rounds the cornes of the box */
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* horizontal, vertical, blur-radius, color */
+  text-align: center;
+}
+
+button {
+  margin-top: 1rem;     /* rem - root em, relative unit of measurement based on roots font size */
+  margin-left: 1rem;
+  margin-right: 1rem;              /* adds margin above */
+  padding: 0.6rem 1.9rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;               /*text color*/
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

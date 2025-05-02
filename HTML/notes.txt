@@ -1,0 +1,11 @@
+rem: root em, relative unit based on root element's font size
+
+By default most browsers set <html> font size to 16 pixels
+
+1 rem = 16px
+2 rem = 32px
+0.5 rem = 8px
+
+Why use rem:
+    - respect browsers accessibility preferences
+    - easier to maintain when root size if changed

@@ -1,0 +1,93 @@
+- What is React:
+=> React is a javascript library for building user interfaces, especially single page 
+   applications(SPAs). 
+
+   It is component based, meaning you build small, reusable pieces that make up your UI
+
+
+
+- NPM vs NPX
+
+=>          npm                                                     npx
+
+-    Node Package Manager                                  Node Package Execute
+-   Used for installing and managing packages            Running a package without installing globally
+-   Install locally or globally (if -g used)            Temporarily runs  and clean up
+-
+
+    - npm install create-react-app
+    => downloads and installs create-react-app into node_modules
+        $ npm install -g create-react-app
+        $ create-react-app my-app
+
+    - npx create-react-app my-app
+    => - Downloads latest version, runs directly without installing it permanaently
+       - Cleaner and easier and preffered for one time tasks
+
+
+
+
+- What is create-react-app
+=> create-react-app  (CRA) is a tool that helps us to create a new React project with zero configuration
+    - It creates project folder (my-app)
+    - setup folder boilerplate
+    - install all required dependencies
+    - 
+
+
+- Create a react app
+=>  - npx create-react-app my-app
+    or
+    - npm create vite@latest my-app -- --template react
+    or 
+    npm install -g create-react-app // installs create-react-app in system
+    create-react-app my-app
+
+
+
+- Folder Structure
+=>  src/ - contains actual code
+    App.jsx - Main component
+    index.jsx entry point
+    public/ - contains static assets like index.html
+
+
+Core Concepts:
+=> - JSX - javascript + HTML syntax
+
+
+What is Vite:
+=> Vite (pronounced as veet) is a fast build tool and developmment server for modern web projects
+    especially in react, Vue, vannila js
+
+    - instant hot reload (HMR)
+    - simple and minimal
+    - work seamlessly with React, Vue, and more
+    - Use Rollup under the hood for production builds
+
+    Vite makes it fast and very easy to build and run web apps. Write code and see changes instantly
+
+    Note: common use before vite was CRA (create-react-app), bundles js in webpack
+
+    Issues with CRA:
+        - slow startup time: bundles the whole app  in webpack before we can see it
+        - slow hot reload
+        - CRA hides a lot of configs behind the scene
+
+Explain => npm create vite@latest myapp -- --template react:
+=> 
+    - npm create vite@latest
+        - use npm project tool to create new project
+
+    - myapp:  the project name
+
+    -- : this tells npm , everything after this is not meant for npm, but for script/package run
+
+    -- template react: use the react template for creating the project
+        Other templates: vanilla, vanilla-ts, react, react-ts, vue, vue-ts
+
+    npm install: 
+        - install dependencies
+
+    npm run dev:
+        - run the npm run with custome scripts in package.json

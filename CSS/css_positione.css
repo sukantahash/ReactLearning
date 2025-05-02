@@ -1,0 +1,209 @@
+/* Article references :
+
+https://blog.hubspot.com/website/css-position
+
+*/
+
+/* CSS Position Property
+The position property in CSS specifies how an element is positioned in a document. It can take 
+several values, each affecting the layout in different ways. The primary values are:
+
+static
+relative
+absolute
+fixed
+sticky */
+
+/* 
+Static Positioning
+
+Definition: This is the default value for any HTML element. Elements are positioned according to the normal flow of the document.
+Characteristics:
+
+The element is not affected by top, bottom, left, or right properties.
+It does not create a new positioning context. 
+*/
+
+
+/* 
+Relative Positioning
+
+Definition: Positions the element relative to its normal position.
+Characteristics:
+
+The element remains in the document flow, but can be offset using top, bottom, left, and right properties.
+Other elements are not affected by the movement of a relatively positioned element. 
+
+z-index: for creating layers
+
+*/
+
+#div-1 { background-color: #FF5C35; }
+
+#div-2 {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  background-color: #0068B1;
+}
+
+#div-3 { background-color: #4FB06D; }
+
+div {
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 75px;
+  color: white;
+  font-size: 24px;
+}
+
+/* 
+Fixed Positioning
+
+Definition: Positions the element relative to the viewport, meaning it stays in the same place 
+even when the page is scrolled.
+Characteristics:
+
+The element is removed from the document flow.
+Useful for creating elements like sticky headers or footers. 
+
+note that using the fixed value automatically establishes a new stacking context.
+
+*/
+
+
+.fixed-example {
+    position: fixed;
+    left: 0;
+  }
+  
+
+/* 
+Absolute Positioning
+
+Definition: Positions the element relative to its nearest positioned ancestor (an ancestor with a 
+position other than static).
+Characteristics:
+
+The element is removed from the document flow, meaning it does not affect the position of other 
+elements.
+If no positioned ancestor exists, it is positioned relative to the initial containing block 
+(usually the viewport). 
+
+*/
+
+<div id="div-1">1</div>
+<div id=container>
+  <div id="div-2">2</div>
+</div>
+<div id="div-3">3</div>
+
+#div-1 { background-color: #FF5C35; }
+
+#div-2 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background-color: #0068B1;
+}
+
+#div-3 { background-color: #4FB06D; }
+
+div {
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 75px;
+  color: white;
+  font-size: 24px;
+}
+
+#container {
+  background-color: #B6C7D6;
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+
+/* 
+
+Sticky Positioning
+
+Definition: A hybrid between relative and fixed. It toggles between these two based on the user's scroll position.
+Characteristics:
+
+The element is positioned relative until a specified scroll position is reached, then it becomes fixed.
+Useful for sticky navigation bars or headers. 
+
+*/
+
+
+<div id="div-1">1</div>
+<div id="div-2">2</div>
+<div id="div-3">3</div>
+<div class="generic"></div>
+<div class="generic"></div>
+<div class="generic"></div>
+<div class="generic"></div>
+<div class="generic"></div>
+<div class="generic"></div>
+<div class="generic"></div>
+
+#div-1 { background-color: #FF5C35; }
+
+#div-2 {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  background-color: #0068B1;
+}
+
+#div-3 { background-color: #4FB06D; }
+
+div {
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 75px;
+  color: white;
+  font-size: 24px;
+}
+
+.generic { background-color: lightgray; }
+
+body { height: 1500px; }
+
+
+/* 
+Z-Index
+
+Definition: The z-index property specifies the stack order of positioned elements.
+Characteristics:
+
+Elements with a higher z-index are displayed in front of elements with a lower z-index.
+Only works on positioned elements (those with a position value other than static). 
+
+*/
+
+.z-index-example {
+    position: absolute;
+}
+
+/* Practical Considerations
+
+Positioning Context: Remember that absolute and fixed positioning remove elements from the document 
+flow, which can affect layout and accessibility.
+Responsive Design: Use positioning wisely to ensure your layout adapts well to different screen
+ sizes.
+Performance: Overusing fixed and absolute positioning can lead to performance issues, especially 
+on mobile devices.
+   */
+  
